@@ -1,0 +1,204 @@
+:root {
+  --theme-color: #0a7e8c;
+}
+html {
+  /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+#intro-h1 {
+  font-size: 50px;
+  color: white;
+}
+#intro-h2 {
+  font-weight: normal;
+  color: var(--theme-color);
+  font-size: 30px;
+}
+h1,
+h2 {
+  margin: 0;
+}
+#header {
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  grid-template-columns: 1fr 1.5fr;
+  background-color: var(--theme-color);
+}
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+body {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+#welcome-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #a8a8a8 0%, #787878);
+  z-index: -1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.border {
+  position: absolute;
+  background-color: var(--theme-color);
+  width: 100vw;
+  height: 5px;
+  z-index: 10;
+}
+#projects {
+  /* position: absolute; */
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, #a8a8a8 0%, #787878);
+  text-align: center;
+}
+#projects-h1 {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 25px;
+  color: white;
+  font-weight: normal;
+}
+img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border: 10px solid var(--theme-color);
+}
+.project-desc {
+  background-color: var(--theme-color);
+  color: white;
+  font-size: 13px;
+  width: 220px;
+  height: 30px;
+  border-bottom-left-radius: 0.5px;
+  border-bottom-right-radius: 0.5px;
+  text-align: center;
+  font-weight: normal;
+}
+.project-grid {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.project-tile {
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-link:hover {
+  color: lightgray;
+}
+.project-link:hover::before {
+  content: "< ";
+}
+.project-link:hover::after {
+  content: " />";
+}
+.show-all-btn {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  display: inline-block;
+  border: none;
+  margin: auto;
+  color: white;
+  background-color: var(--theme-color);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.show-all-btn:hover {
+  color: lightgray;
+}
+.show-all-btn:hover::after {
+  content: " >";
+}
+#contact-section {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #a8a8a8 0%, #787878);
+  /* z-index: -1; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact-h1 {
+  justify-content: center;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-link {
+  margin: 10px;
+  font-size: 20px;
+}
+p {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+footer {
+  background: linear-gradient(90deg, #a8a8a8 0%, #787878);
+  font-size: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  margin: 0;
+}
+@media screen and (max-width: 700px) {
+  .project-grid {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer > p {
+    font-size: 10px;
+    text-align: left;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .project-desc {
+    width: 120px;
+    font-size: 12px;
+  }
+  #projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contact-link {
+    font-size: 15px;
+  }
+}
